@@ -1,0 +1,11 @@
+.Form {
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+}
+.input {
+
+    max-width: 150px;
+}
