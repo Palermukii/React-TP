@@ -8,8 +8,8 @@ function App() {
       <div>
         <div><h1>Bienvenido al blog.</h1></div>
         <div>
-          <button>Home</button>
-          <button><a href="/newpost">new post</a></button>
+        <button><a href="/">Home</a></button>
+          <button><a href="/newpost">New Post</a></button>
         </div>
       </div>
   )
