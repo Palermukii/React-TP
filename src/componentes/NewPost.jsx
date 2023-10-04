@@ -1,7 +1,6 @@
 import './NewPost.css'
 import React, { useState, useEffect } from "react";
-import Markdown from "react-markdown";
-import remarkGfm from 'remark-gfm'; 
+
 import Posts from './Post'
 
 const NewPost = () => {
@@ -55,13 +54,7 @@ useEffect(()=> {
       </form>
       {post && <Posts post={post} />} 
 
-      <div>
-        {post.map((p,i) => <div key={i}>
-          <h1>{p.tittle}</h1>
-          <h3>{p.name}</h3>
-      <Markdown remarkPlugins={[remarkGfm]}>{p.article}</Markdown>
-        </div> )}
-      </div>
+      
     </div>
       </div>
   );
