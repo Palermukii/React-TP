@@ -21,9 +21,9 @@ function App() {
         <h1>Bienvenido al blog.</h1>
           <div>
             {post.map((p,i) => <div key={i}>
-            <h1>{p.tittle}</h1>
-            <h3>{p.name}</h3>
-            <Markdown remarkPlugins={[remarkGfm]}>{p.article}</Markdown>
+            <h2>{p.name}</h2>
+            <h3>{p.tittle}</h3>
+            {/* <Markdown remarkPlugins={[remarkGfm]}>{p.article}</Markdown> */}
           </div> )}
         </div>
       </div>
