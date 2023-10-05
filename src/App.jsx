@@ -1,7 +1,5 @@
 import './App.css'
 import { useState, useEffect } from 'react';
-import Markdown from "react-markdown";
-import remarkGfm from 'remark-gfm'; 
 // Cambiar variables posteos y post
 
 
@@ -38,11 +36,13 @@ return (
     <input type="text" value={busqueda} onChange={onChange}/>
     <h1>Bienvenido al blog.</h1>
       <div className='Posts'>
-        {buscado.map((p,i) => <div className='Post' key={i}>
-        <h2><u>Titulo: {p.tittle}</u></h2>
-        <h3>Hecho por: {p.name}</h3>
-        {/* <Markdown remarkPlugins={[remarkGfm]}>{p.article}</Markdown> */}
-      </div> )}
+        {buscado.map((p) => 
+        <a href={`/post/${p.id}`} key={p.id}>
+          <div className='Post' >
+            <h2><u>Titulo: {p.tittle}</u></h2>
+            <h3>Hecho por: {p.name}</h3>
+          </div> 
+      </a>)}
     </div>
   </div>
 )

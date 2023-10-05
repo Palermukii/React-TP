@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-<<<<<<< HEAD
     align-items: center;
   }
   .Form {
@@ -15,13 +14,11 @@
   .publicar {
   
       color: rgba(0, 255, 255, 0.445);
-  }
-  .botonHeader{
+}
+.botonHeader{
     margin: 0px;
     padding: 0px;
     border: 0px;
-  }
-=======
 }
 .publicar {
 
@@ -31,9 +28,4 @@
   margin: 0px;
   padding: 0px;
   border: 0px;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> bff43e0191f2fdb3a2b08a345f510a9dce39d5b1
->>>>>>> 762688fe0bbb1dc5445763b707bc91813c809bf7
