@@ -53,7 +53,6 @@ const handleSubmit = (e) => {
       <textarea value={article} id="Articulo" cols="40" rows="10" onChange={(e) => setArticle(e.target.value)}></textarea>
       <button className="publicar" type='submit'>Publicar</button>
     </form>
-    {post && <Posts post={post} />} 
 
     
   </div>

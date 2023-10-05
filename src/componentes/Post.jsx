@@ -9,7 +9,7 @@ const Post = () => {
     useEffect(()=> {
         let posteos = JSON.parse(localStorage.getItem('post'));
         if (posteos) setPost(posteos.filter(p => p.id == id)[0]); 
-    },[])
+    },[]);
     
     
     
