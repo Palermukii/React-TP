@@ -11,7 +11,12 @@
     gap: 30px;
     justify-content: center;
 }
-.input {
+.publicar {
 
-    max-width: 150px;
+    color: rgba(0, 255, 255, 0.445);
+}
+.botonHeader{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
 }

@@ -1,5 +1,5 @@
 import './NewPost.css'
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import Posts from './Post'
 
@@ -8,7 +8,6 @@ const [name, setName] = useState("");
 const [tittle, setTittle] = useState("");
 const [article, setArticle] = useState("");
 const [post, setPost] = useState([]);
-
 useEffect(()=> {
   let posteos = JSON.parse(localStorage.getItem('post'));
   if (posteos) {
@@ -18,7 +17,7 @@ useEffect(()=> {
 
 const handleSubmit = (e) => {
     e.preventDefault();
-    const newPosts = [{ name, tittle, article }, ...post];
+    const newPosts = [{ name, tittle, article, id: post.length}, ...post];
     setPost(newPosts);
     console.log(newPosts);
     localStorage.setItem('post', JSON.stringify(newPosts));

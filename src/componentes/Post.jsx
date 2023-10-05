@@ -1,7 +1,7 @@
 import NewPost from "./NewPost";
 
-const Posts = (props) => {
-
+const Posts = (e) => {
+    
 
     return (
         <div>

@@ -1,7 +1,7 @@
 import './App.css'
 import { useState, useEffect } from 'react';
-import Markdown from "react-markdown";
-import remarkGfm from 'remark-gfm'; 
+// import Markdown from "react-markdown";
+// import remarkGfm from 'remark-gfm'; 
 
 function App() {
   const [post, setPost] = useState([]);
@@ -28,7 +28,6 @@ function App() {
               <h3>Hecho por: {p.name}</h3>
               </a>
             </div> )}
-            {/* {titulo.map((t,i)=><h1 key={i}>{t}</h1>)} */}
         </div>
       </div>
   )
