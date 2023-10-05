@@ -1,17 +1,22 @@
 .NewPost {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.Form {
-
     display: flex;
     flex-direction: column;
-    gap: 30px;
     justify-content: center;
-}
-.input {
-
-    max-width: 150px;
-}
+    align-items: center;
+  }
+  .Form {
+  
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      justify-content: center;
+  }
+  .publicar {
+  
+      color: rgba(0, 255, 255, 0.445);
+  }
+  .botonHeader{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
