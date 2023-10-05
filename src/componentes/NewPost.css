@@ -1,3 +1,9 @@
+.NewPost {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .Form {
 
     display: flex;

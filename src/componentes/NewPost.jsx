@@ -9,12 +9,7 @@ const [tittle, setTittle] = useState("");
 const [article, setArticle] = useState("");
 const [post, setPost] = useState([]);
 
-useEffect(()=> {
-  let posteos = JSON.parse(localStorage.getItem('post'));
-  if (posteos) setPost(posteos);
-},[])
-
-  const handleSubmit = (e) => {
+const handleSubmit = (e) => {
     e.preventDefault();
     const newPosts = [...post, { name, tittle, article }];
     setPost(newPosts);
@@ -27,8 +22,8 @@ useEffect(()=> {
 
 
   return (
-      <div>
-        <div>
+      <div className='NewPost'>
+        <div className='Header'>
         <button><a href="/">Home</a></button>
           <button><a href="/newpost">New Post</a></button>
         </div>
@@ -50,7 +45,7 @@ useEffect(()=> {
           placeholder="Título"
         />
         <textarea value={article} id="Articulo" cols="40" rows="10" onChange={(e) => setArticle(e.target.value)}></textarea>
-        <input type="submit" />
+        <button type='submit'>Publicar</button>
       </form>
       {post && <Posts post={post} />} 
 

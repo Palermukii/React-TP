@@ -13,16 +13,16 @@ function App() {
 
 
   return (
-      <div>
-        <div>
+      <div className='Home'>
+        <div className='Header'>
         <button><a href="/">Home</a></button>
           <button><a href="/newpost">New Post</a></button>
         </div>
         <h1>Bienvenido al blog.</h1>
-          <div>
-            {post.map((p,i) => <div key={i}>
-            <h2>{p.name}</h2>
-            <h3>{p.tittle}</h3>
+          <div className='Posts'>
+            {post.map((p,i) => <div className='Post' key={i}>
+            <h2><u>Titulo: {p.tittle}</u></h2>
+            <h3>Hecho por: {p.name}</h3>
             {/* <Markdown remarkPlugins={[remarkGfm]}>{p.article}</Markdown> */}
           </div> )}
         </div>
