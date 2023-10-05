@@ -24,8 +24,8 @@ const handleSubmit = (e) => {
   return (
       <div className='NewPost'>
         <div className='Header'>
-        <button><a href="/">Home</a></button>
-          <button><a href="/newpost">New Post</a></button>
+        <button className='botonHeader'><a href="/">Home</a></button>
+          <button className='botonHeader'><a href="/newpost">New Post</a></button>
         </div>
         <div>
         <h1>¡Crea tu propio Post!</h1>
@@ -45,7 +45,7 @@ const handleSubmit = (e) => {
           placeholder="Título"
         />
         <textarea value={article} id="Articulo" cols="40" rows="10" onChange={(e) => setArticle(e.target.value)}></textarea>
-        <button type='submit'>Publicar</button>
+        <button className="publicar" type='submit'>Publicar</button>
       </form>
       {post && <Posts post={post} />} 
 

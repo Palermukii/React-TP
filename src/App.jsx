@@ -15,9 +15,11 @@ function App() {
   return (
       <div className='Home'>
         <div className='Header'>
-        <button><a href="/">Home</a></button>
-          <button><a href="/newpost">New Post</a></button>
+        <button className='botonHeader'><a href="/">Home</a></button>
+          <button className='botonHeader'><a href="/newpost">New Post</a></button>
+          <button className='botonHeader'><a target="_blank" href="http://www.tecnica35.com.ar/">About us</a></button>
         </div>
+        <img src="" alt="" />
         <h1>Bienvenido al blog.</h1>
           <div className='Posts'>
             {post.map((p,i) => <div className='Post' key={i}>
