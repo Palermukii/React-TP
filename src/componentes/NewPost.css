@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-<<<<<<< HEAD
     align-items: center;
   }
   .Form {
@@ -21,15 +20,3 @@
     padding: 0px;
     border: 0px;
   }
-=======
-}
-.publicar {
-
-    color: rgba(0, 255, 255, 0.445);
-}
-.botonHeader{
-  margin: 0px;
-  padding: 0px;
-  border: 0px;
-}
->>>>>>> bff43e0191f2fdb3a2b08a345f510a9dce39d5b1
