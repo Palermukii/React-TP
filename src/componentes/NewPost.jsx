@@ -9,9 +9,16 @@ const [tittle, setTittle] = useState("");
 const [article, setArticle] = useState("");
 const [post, setPost] = useState([]);
 
+useEffect(()=> {
+  let posteos = JSON.parse(localStorage.getItem('post'));
+  if (posteos) {
+    setPost(posteos);
+  }
+},[])
+
 const handleSubmit = (e) => {
     e.preventDefault();
-    const newPosts = [...post, { name, tittle, article }];
+    const newPosts = [{ name, tittle, article }, ...post];
     setPost(newPosts);
     console.log(newPosts);
     localStorage.setItem('post', JSON.stringify(newPosts));

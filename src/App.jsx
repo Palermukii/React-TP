@@ -8,7 +8,9 @@ function App() {
 
   useEffect(()=> {
     let posteos = JSON.parse(localStorage.getItem('post'));
-    if (posteos) setPost(posteos);
+    if (posteos) {
+      setPost(posteos);
+    }
   },[])
 
 
@@ -20,11 +22,13 @@ function App() {
         </div>
         <h1>Bienvenido al blog.</h1>
           <div className='Posts'>
-            {post.map((p,i) => <div className='Post' key={i}>
-            <h2><u>Titulo: {p.tittle}</u></h2>
-            <h3>Hecho por: {p.name}</h3>
-            {/* <Markdown remarkPlugins={[remarkGfm]}>{p.article}</Markdown> */}
-          </div> )}
+            {post.map((p,i) => 
+            <div className='Post' key={i} ><a href='/post'>
+              <h2><u>Titulo: {p.tittle}</u></h2>
+              <h3>Hecho por: {p.name}</h3>
+              </a>
+            </div> )}
+            {/* {titulo.map((t,i)=><h1 key={i}>{t}</h1>)} */}
         </div>
       </div>
   )
