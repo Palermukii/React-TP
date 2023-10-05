@@ -37,12 +37,15 @@ return (
     <h1>Bienvenido al blog.</h1>
       <div className='Posts'>
         {buscado.map((p) => 
-        <a href={`/post/${p.id}`} key={p.id}>
-          <div className='Post' >
-            <h2><u>Titulo: {p.tittle}</u></h2>
-            <h3>Hecho por: {p.name}</h3>
+          <div  key={p.id}>
+            <a href={`/post/${p.id}`} >
+              <div className='Post'>
+              <h2><u>Titulo: {p.tittle}</u></h2>
+              <h3>Hecho por: {p.name}</h3>
+              </div>
+            </a>
           </div> 
-      </a>)}
+        )}
     </div>
   </div>
 )
