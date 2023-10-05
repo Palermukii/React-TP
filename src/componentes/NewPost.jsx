@@ -1,13 +1,13 @@
 import './NewPost.css'
 import React, { useState, useEffect, useRef } from "react";
 
-import Posts from './Post'
 
 const NewPost = () => {
 const [name, setName] = useState("");
 const [tittle, setTittle] = useState("");
 const [article, setArticle] = useState("");
 const [post, setPost] = useState([]);
+const [comment, setCommetn] = useState([]);
 
 
 useEffect(()=> {
