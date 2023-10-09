@@ -5,38 +5,52 @@ import remarkGfm from 'remark-gfm';
 
 
 const Post = () => {
+    const [name, setName] = useState("");
+    const [coment, setComent] = useState("");
+    const [comments,setComments] = useState([]);
     const [post, setPost] = useState({});
-    const [comment,setComment] = useState([]);
     const {id} = useParams();
+    
     useEffect(()=> {
-        let comentarios = JSON.parse(localStorage.getItem('comment'));
+        let comentarios = JSON.parse(localStorage.getItem('comments'));
         let posteos = JSON.parse(localStorage.getItem('post'));
         if (posteos) setPost(posteos.filter(p => p.id == id)[0]);
-        if (comentarios) setComment(comentarios);
+        if (comentarios) setComments(comentarios.filter(c => c.idPost == post.id)[0]);
     },[]);
     
-    const [ver, setVer] = useState(false);
-    
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const newComment = [{ name,coment, idPost: id, id: comments.length}, ...comments];
+        setComments(newComment);
+        localStorage.setItem('comment', JSON.stringify(newComment));
+        setComent('');
+        setName('');
+      };
     
     return (
-        <div>
+        <div className='NewPost'>
+            <div className='Header'>
+                    <button className='botonHeader'><a href="/">Home</a></button>
+                    <button className='botonHeader'><a href="/newpost">New Post</a></button>
+                </div>
            <div>
                 <h1><u>Titulo: {post.tittle}</u></h1>
                 <Markdown remarkPlugins={[remarkGfm]}>{post.article}</Markdown>
                 <h4>Autor: {post.name}</h4>
            </div>
-           <button onClick={()=>setVer(!ver)}>{ver? "Dejar de ver" : "Ver comentarios"}</button>
-           <button><a href="/comments">Comentar</a></button>
-           {ver && (
-            <div>
-                {comment.map((c,i)=>
-                <div key={i}>
-                    <h3>Usuario: {c.name}</h3>
-                    <Markdown remarkPlugins={[remarkGfm]}>{c.coment}</Markdown>
-                </div>
-                )}
+           <div>
+                <form onSubmit={handleSubmit} className="Form">
+                    <input type="text" placeholder="Nombre" value={name} onChange={(e)=>setName(e.target.value)}/>
+                    <textarea value={coment} cols="40" rows="4" onChange={(e) => setComent(e.target.value)}></textarea>
+                    <button className="publicar" type='submit'>Publicar comentario</button>
+                </form>
             </div>
-           )}
+            {comments.map((c,i)=>
+            <div key={i}>
+                <h3>Usuario: {c.name}</h3>
+                <Markdown remarkPlugins={[remarkGfm]}>{c.coment}</Markdown>
+            </div>
+            )}
         </div>
     );
 }

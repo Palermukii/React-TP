@@ -8,16 +8,11 @@ import {
 } from 'react-router-dom';
 import Post from './componentes/Post.jsx';
 import NewPost from './componentes/NewPost.jsx';
-import Comments from './componentes/Comments.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />
-  },
-  {
-    path: '/comments',
-    element: <Comments />
   },
   {
     path: '/post/:id',
