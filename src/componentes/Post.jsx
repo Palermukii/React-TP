@@ -12,17 +12,17 @@ const Post = () => {
     const {id} = useParams();
     
     useEffect(()=> {
-        let comentarios = JSON.parse(localStorage.getItem('comments'));
         let posteos = JSON.parse(localStorage.getItem('post'));
         if (posteos) setPost(posteos.filter(p => p.id == id)[0]);
-        if (comentarios) setComments(comentarios.filter(c => c.idPost == post.id)[0]);
+        let comentarios = JSON.parse(localStorage.getItem(`comment-${id}`));
+        if (comentarios) setComments(comentarios);
     },[]);
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        const newComment = [{ name,coment, idPost: id, id: comments.length}, ...comments];
+        const newComment = [{ name,coment,postID: post.id ,id: comments.length}, ...comments];
         setComments(newComment);
-        localStorage.setItem('comment', JSON.stringify(newComment));
+        localStorage.setItem(`comment-${post.id}`, JSON.stringify(newComment));
         setComent('');
         setName('');
       };
