@@ -7,7 +7,6 @@ const [name, setName] = useState("");
 const [tittle, setTittle] = useState("");
 const [article, setArticle] = useState("");
 const [post, setPost] = useState([]);
-const [comment, setCommetn] = useState([]);
 
 
 useEffect(()=> {
@@ -61,6 +60,3 @@ const handleSubmit = (e) => {
 };
 
 export default NewPost;
-
-
-
