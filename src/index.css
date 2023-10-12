@@ -45,7 +45,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #0a56b1;
 }
 button:focus,
 button:focus-visible {
@@ -53,5 +53,5 @@ button:focus-visible {
 } 
 .publicar {
 
-  color: black;
+  color: #089CCE;
 }

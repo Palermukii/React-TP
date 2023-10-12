@@ -1,7 +1,4 @@
-/* div {
-  margin: 0 auto;
 
-} */
 .Home {
   display: flex;
   flex-direction: column;
@@ -12,7 +9,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: cyan;
+  background-color: #089cce;
   width: 100%;
   border: 5px solid rgb(1, 1, 156);
 }
@@ -20,7 +17,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: cyan;
+  background-color: #089cce;
   width: 100%;
   text-decoration: none;
   }
@@ -28,7 +25,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: cyan;
+  background-color: #089cce;
   width: 100%;
   text-decoration: none;
     margin: 0px;
@@ -57,5 +54,5 @@
   transition: .3s all;
 }
 .Post:hover {
-  border-color:  #535bf2;
+  border-color:  #0a65b1;
 }
