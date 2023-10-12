@@ -44,7 +44,7 @@ function MainPage(props) {
         <button className='botonHeader'><Link target="_blank" to="https://youtu.be/SIaFtAKnqBU?si=WKWWpEAL6vLIyWXM&t=2">About us</Link></button>
       </div>
       <br />
-      <input type="text" value={busqueda} onChange={onChange}/>
+      <input type="text" value={busqueda} onChange={onChange} placeholder='Busca un blog'/>
       <h1>Bienvenido al blog.</h1>
       <div className='Posts'>
         {buscado.map((p) => 
