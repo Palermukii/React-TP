@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Markdown from "react-markdown";
 import remarkGfm from 'remark-gfm';
-
+import { Link } from 'react-router-dom';
 
 const Post = () => {
     const [name, setName] = useState("");
@@ -29,13 +29,16 @@ const Post = () => {
     
     return (
         <div className='NewPost'>
-            <div className='Header'>
-                    <button className='botonHeader'><a href="/">Home</a></button>
-                    <button className='botonHeader'><a href="/newpost">New Post</a></button>
-                </div>
+           <div className='Header'>
+        <button className='botonHeader'><Link to="/">Home</Link></button>
+        <button className='botonHeader'><Link to="/newpost">New Post</Link></button>
+        <button className='botonHeader'><Link target="_blank" to="https://youtu.be/SIaFtAKnqBU?si=WKWWpEAL6vLIyWXM&t=2">About us</Link></button>
+      </div>
            <div>
                 <h1><u>Titulo: {post.tittle}</u></h1>
-                <Markdown remarkPlugins={[remarkGfm]}>{post.article}</Markdown>
+                <div className="postArticle">
+                <Markdown className="Markdown" remarkPlugins={[remarkGfm]}>{post.article}</Markdown>
+                </div>
                 <h4>Autor: {post.name}</h4>
            </div>
            <div>
@@ -48,8 +51,8 @@ const Post = () => {
             {comments.map((c,i)=>
             <div key={i}>
                 <h3>Usuario: {c.name}</h3>
-                <Markdown remarkPlugins={[remarkGfm]}>{c.coment}</Markdown>
-            </div>
+<Markdown remarkPlugins={[remarkGfm]}>{c.coment}</Markdown>
+</div>
             )}
         </div>
     );

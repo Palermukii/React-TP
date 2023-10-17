@@ -10,7 +10,6 @@ const Admin = props => {
         e.preventDefault(); 
         if (password === "123") { 
             setAdmin(true);
-            console.log('Contraseña correcta');
         }
     }
 

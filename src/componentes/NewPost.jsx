@@ -1,5 +1,6 @@
 import './NewPost.css'
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from 'react-router-dom';
 
 
 const NewPost = () => {
@@ -16,7 +17,7 @@ useEffect(()=> {
 
 const handleSubmit = (e) => {
     e.preventDefault();
-    const newPosts = [{ name, tittle, article, id: post.length}, ...post];
+    const newPosts = [{ name, tittle, article, id: Math.floor(Math.random() * 100000000)}, ...post];
     setPost(newPosts);
     console.log(newPosts);
     localStorage.setItem('post', JSON.stringify(newPosts));
@@ -29,8 +30,9 @@ const handleSubmit = (e) => {
   return (
     <div className='NewPost'>
       <div className='Header'>
-      <button className='botonHeader'><a href="/">Home</a></button>
-        <button className='botonHeader'><a href="/newpost">New Post</a></button>
+        <button className='botonHeader'><Link to="/">Home</Link></button>
+        <button className='botonHeader'><Link to="/newpost">New Post</Link></button>
+        <button className='botonHeader'><Link target="_blank" to="https://youtu.be/SIaFtAKnqBU?si=WKWWpEAL6vLIyWXM&t=2">About us</Link></button>
       </div>
       <div>
       <h1>¡Crea tu propio Post!</h1>

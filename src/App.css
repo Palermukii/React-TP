@@ -1,3 +1,49 @@
+.Home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.botonHeader{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+a {
+  color: black;
+  height: 25px;
+  font-size: larger;
+}
+
+
+a:hover {
+  color: black;
+} 
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.botonHeader {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+    min-width: 40%;
+
+}
+.botonHeader:hover {
+  border-color: #0a56b1;
+}
+.botonHeader:focus,
+.botonHeader:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+} 
 
 .Home {
   display: flex;
@@ -32,27 +78,22 @@
     padding: 0px;
     border: 0px;
   }
-
-  a {
+  .Posts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 40%;
+  }
+  .Post {
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 10px;
     color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .3s all;
   }
 
-.Posts {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  min-width: 40%;
-}
-.Post {
-  background-color: white;
-  border: 5px solid black;
-  border-radius: 10px;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: .3s all;
-}
-.Post:hover {
-  border-color:  #0a65b1;
-}
+
+  

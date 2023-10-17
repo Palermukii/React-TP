@@ -30,7 +30,7 @@ function MainPage(props) {
       let array = post.filter((item) => {
         let s1 = item.tittle.toLowerCase();
         let s2 = e.target.value.toLowerCase();
-        if (s1.startsWith(s2)) return s1;
+        if (s1.includes(s2)) return s1;
         else return 0;
       })
     setBuscado(array);
@@ -49,12 +49,12 @@ function MainPage(props) {
       <div className='Posts'>
         {buscado.map((p) => 
           <div  key={p.id}>
-            <a href={`/post/${p.id}`} >
+            <button ><Link className="postLink" to = {`/post/${p.id}`}>
               <div className='Post'>
               <h2><u>Titulo: {p.tittle}</u></h2>
               <h3>Hecho por: {p.name}</h3>
               </div>
-            </a>
+              </Link></button> 
             {admin && <button id={p.id} onClick={handleClick}>Borrar</button>}
           </div> 
         )}
