@@ -1,4 +1,4 @@
-import './NewPost.css'
+import '../App.css'
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from 'react-router-dom';
 
@@ -30,9 +30,9 @@ const handleSubmit = (e) => {
   return (
     <div className='NewPost'>
       <div className='Header'>
-        <button className='botonHeader'><Link to="/">Home</Link></button>
-        <button className='botonHeader'><Link to="/newpost">New Post</Link></button>
-        <button className='botonHeader'><Link target="_blank" to="https://youtu.be/SIaFtAKnqBU?si=WKWWpEAL6vLIyWXM&t=2">About us</Link></button>
+        <button className='botonHeader'><Link className='Anchor' to="/">Home</Link></button>
+        <button className='botonHeader'><Link className='Anchor' to="/newpost">New Post</Link></button>
+        <button className='botonHeader'><Link className='Anchor' target="_blank" to="https://youtu.be/SIaFtAKnqBU?si=WKWWpEAL6vLIyWXM&t=2">About us</Link></button>
       </div>
       <div>
       <h1>¡Crea tu propio Post!</h1>

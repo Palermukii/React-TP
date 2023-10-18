@@ -1,99 +1,112 @@
+
+
 .Home {
+  text-align: center;
+  padding: 20px;
+}
+
+.Header {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.botonHeader{
-  margin: 0px;
-  padding: 0px;
-  border: 0px;
-}
-a {
-  color: black;
-  height: 25px;
-  font-size: larger;
-}
+  justify-content: space-between;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
 
-
-a:hover {
-  color: black;
-} 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
 }
 
 .botonHeader {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: transparent;
+  border: none;
+  color: #f2f2f2;
   cursor: pointer;
-  transition: border-color 0.25s;
-    min-width: 40%;
-
+  margin: 0 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
 }
+
 .botonHeader:hover {
-  border-color: #0a56b1;
+  color: #ff9800;
 }
-.botonHeader:focus,
-.botonHeader:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-} 
 
-.Home {
+.Anchor {
+  text-decoration: none;
+  color: white;
+}
+
+input {
+  width: 30%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.postLink {
+  text-decoration: none;
+  color: #333;
+}
+.Posts {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 40px;
 }
-.Header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: #089cce;
-  width: 100%;
-  border: 5px solid rgb(1, 1, 156);
-}
-.Header a {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: #089cce;
-  width: 100%;
-  text-decoration: none;
-  }
-.botonHeader{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: #089cce;
-  width: 100%;
-  text-decoration: none;
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-  }
-  .Posts {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    min-width: 40%;
-  }
-  .Post {
-    background-color: white;
-    border: 5px solid black;
-    border-radius: 10px;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: .3s all;
-  }
 
 
+.Post button {
+  margin: 0; 
+}
+.Post {
+  border: 2px solid #f9f9f9;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  background-color: #f9f9f9;
+  max-width: 300px; 
+  overflow: hidden; 
+  white-space: nowrap;
+  text-overflow: ellipsis; 
+  transition: border-color 0.25s;
+}
+
+h2 {
+  font-size: 18px;
+  margin: 0;
   
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
+h3 {
+  font-size: 14px;
+  color: #888;
+  margin: 0;
+
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
+button {
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.Post:hover {
+  border: slateblue 2px solid;
+}
+
+button:hover {
+  background-color: #5f5950;
+}

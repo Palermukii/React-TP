@@ -39,9 +39,9 @@ function MainPage(props) {
   return (
     <div className='Home'>
       <div className='Header'>
-        <button className='botonHeader'><Link to="/">Home</Link></button>
-        <button className='botonHeader'><Link to="/newpost">New Post</Link></button>
-        <button className='botonHeader'><Link target="_blank" to="https://youtu.be/SIaFtAKnqBU?si=WKWWpEAL6vLIyWXM&t=2">About us</Link></button>
+        <button className='botonHeader'><Link className='Anchor' to="/">Home</Link></button>
+        <button className='botonHeader'><Link className='Anchor' to="/newpost">New Post</Link></button>
+        <button className='botonHeader'><Link className='Anchor' target="_blank" to="https://youtu.be/SIaFtAKnqBU?si=WKWWpEAL6vLIyWXM&t=2">About us</Link></button>
       </div>
       <br />
       <input type="text" value={busqueda} onChange={onChange} placeholder='Busca un blog'/>
@@ -49,12 +49,12 @@ function MainPage(props) {
       <div className='Posts'>
         {buscado.map((p) => 
           <div  key={p.id}>
-            <button ><Link className="postLink" to = {`/post/${p.id}`}>
+           <Link className="postLink" to = {`/post/${p.id}`}>
               <div className='Post'>
               <h2><u>Titulo: {p.tittle}</u></h2>
               <h3>Hecho por: {p.name}</h3>
               </div>
-              </Link></button> 
+              </Link>
             {admin && <button id={p.id} onClick={handleClick}>Borrar</button>}
           </div> 
         )}

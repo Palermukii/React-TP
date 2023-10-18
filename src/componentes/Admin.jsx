@@ -17,11 +17,11 @@ const Admin = props => {
         <div>
             {admin ? (
                 <div className='Home'>
-                    <div className='Header'>
-                        <button className='botonHeader'><Link to="/">Home</Link></button>
-                        <button className='botonHeader'><Link to="/newpost">New Post</Link></button>
-                        <button className='botonHeader'><Link target="_blank" to="https://youtu.be/SIaFtAKnqBU?si=WKWWpEAL6vLIyWXM&t=2">About us</Link></button>
-                    </div>
+                   <div className='Header'>
+        <button className='botonHeader'><Link className='Anchor' to="/">Home</Link></button>
+        <button className='botonHeader'><Link className='Anchor' to="/newpost">New Post</Link></button>
+        <button className='botonHeader'><Link className='Anchor' target="_blank" to="https://youtu.be/SIaFtAKnqBU?si=WKWWpEAL6vLIyWXM&t=2">About us</Link></button>
+      </div>
                     <h1>Ya sos admin</h1>
                 </div>
             ) : (

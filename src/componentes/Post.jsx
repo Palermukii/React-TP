@@ -28,11 +28,11 @@ const Post = () => {
       };
     
     return (
-        <div className='NewPost'>
-           <div className='Header'>
-        <button className='botonHeader'><Link to="/">Home</Link></button>
-        <button className='botonHeader'><Link to="/newpost">New Post</Link></button>
-        <button className='botonHeader'><Link target="_blank" to="https://youtu.be/SIaFtAKnqBU?si=WKWWpEAL6vLIyWXM&t=2">About us</Link></button>
+        <div className="NewPost">
+          <div className='Header'>
+        <button className='botonHeader'><Link className='Anchor' to="/">Home</Link></button>
+        <button className='botonHeader'><Link className='Anchor' to="/newpost">New Post</Link></button>
+        <button className='botonHeader'><Link className='Anchor' target="_blank" to="https://youtu.be/SIaFtAKnqBU?si=WKWWpEAL6vLIyWXM&t=2">About us</Link></button>
       </div>
            <div>
                 <h1><u>Titulo: {post.tittle}</u></h1>
