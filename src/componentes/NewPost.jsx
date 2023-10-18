@@ -1,7 +1,7 @@
 import '../App.css'
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from 'react-router-dom';
-
+import escudo from "./EscudoSinAnimacion.png"
 
 const NewPost = () => {
 const [name, setName] = useState("");
@@ -36,7 +36,7 @@ const handleSubmit = (e) => {
       </div>
       <div>
         <br />
-        <img src="EscudoSinAnimacion.png" alt="Logotipo escuela" />
+        <img src={escudo} alt="Logotipo escuela" />
         <br />
       <h1>¡Crea tu propio Post!</h1>
     <form onSubmit={handleSubmit} className="Form">

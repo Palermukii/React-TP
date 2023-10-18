@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import escudo from './EscudoSinAnimacion.png'
 
 function MainPage(props) {
     const {admin} = props;
@@ -45,7 +46,7 @@ function MainPage(props) {
         <button className='botonHeader'><Link className='Anchor' target="_blank" to="https://youtu.be/SIaFtAKnqBU?si=WKWWpEAL6vLIyWXM&t=2">About us</Link></button>
       </div>
       <br />
-      <img src="EscudoSinAnimacion.png" alt="Logotipo escuela" />
+      <img src={escudo}alt="Logotipo escuela" />
       <br />
       <h1>Bienvenido al blog.</h1>
       <input type="text" value={busqueda} onChange={onChange} placeholder='Busca un blog'/>
