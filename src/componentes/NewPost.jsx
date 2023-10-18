@@ -35,6 +35,9 @@ const handleSubmit = (e) => {
         <button className='botonHeader'><Link className='Anchor' target="_blank" to="https://youtu.be/SIaFtAKnqBU?si=WKWWpEAL6vLIyWXM&t=2">About us</Link></button>
       </div>
       <div>
+        <br />
+        <img src="../EscudoSinAnimacion.png" alt="Logotipo escuela" />
+        <br />
       <h1>¡Crea tu propio Post!</h1>
     <form onSubmit={handleSubmit} className="Form">
       <input className='input' 

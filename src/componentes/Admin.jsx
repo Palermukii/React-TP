@@ -26,7 +26,10 @@ const Admin = props => {
                 </div>
             ) : (
                 <div className='home'>
-                    <h2>Inicia sesión como admin</h2>
+                    <div className='home2'>
+                    <h2 id='inciaSesion'>Inicia sesión como admin</h2>
+                    <img className='incognito' src="https://sandstormit.com/wp-content/uploads/2021/06/incognito-2231825_960_720-1.png" alt="Incognito" />
+                    </div>
                     <form onSubmit={handleSubmit} className='Form'>
                         <input
                             type="password"
