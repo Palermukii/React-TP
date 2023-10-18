@@ -36,7 +36,7 @@ const handleSubmit = (e) => {
       </div>
       <div>
         <br />
-        <img src="../EscudoSinAnimacion.png" alt="Logotipo escuela" />
+        <img src="EscudoSinAnimacion.png" alt="Logotipo escuela" />
         <br />
       <h1>¡Crea tu propio Post!</h1>
     <form onSubmit={handleSubmit} className="Form">
