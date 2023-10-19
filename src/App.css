@@ -113,3 +113,9 @@ button {
 button:hover {
   background-color: #5f5950;
 }
+hr {
+  width: 10%;
+}
+.Markdown {
+  word-wrap: break-word;
+}

@@ -41,6 +41,7 @@ const Post = () => {
                 </div>
                 <h4>Autor: {post.name}</h4>
            </div>
+           <br />
            <div>
                 <form onSubmit={handleSubmit} className="Form">
                     <input type="text" placeholder="Nombre" value={name} onChange={(e)=>setName(e.target.value)}/>
@@ -48,10 +49,13 @@ const Post = () => {
                     <button className="publicar" type='submit'>Publicar comentario</button>
                 </form>
             </div>
+            <br />
+            <h1>Comentarios</h1>
             {comments.map((c,i)=>
             <div key={i}>
                 <h3>Usuario: {c.name}</h3>
 <Markdown remarkPlugins={[remarkGfm]}>{c.coment}</Markdown>
+<hr />
 </div>
             )}
         </div>
